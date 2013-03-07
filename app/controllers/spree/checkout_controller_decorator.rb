@@ -6,7 +6,7 @@ if defined?(Spree::CheckoutController)
     helper 'spree/users'
 
     def registration
-      @user = Spree::User.new
+      @user = ::User.new
     end
 
     def update_registration
@@ -16,7 +16,7 @@ if defined?(Spree::CheckoutController)
       if current_order.update_attributes(params[:order])
         redirect_to checkout_path
       else
-        @user = Spree::User.new
+        @user = ::User.new
         render 'registration'
       end
     end

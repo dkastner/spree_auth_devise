@@ -1,1 +1,1 @@
-require 'spree/auth/devise'
+require 'spree/auth/existing_devise'
