@@ -1,3 +1,4 @@
+puts 'decorating base controller'
 Spree::BaseController.class_eval do
   def spree_login_path
     '/site_admins/sign_in'
@@ -12,7 +13,7 @@ Spree::BaseController.class_eval do
   end
 
   def spree_current_user
-    current_user
+    current_admin
   end
 end
 
